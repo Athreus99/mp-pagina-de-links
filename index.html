@@ -6,25 +6,18 @@
   <title>Página de Links</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="app background">
+<body class="background">
   <div class="container">
-    <header class="app header">
-      <img id="profile-photo" src="avatar.jpg" alt="Foto de Perfil" class="app photo">
-      <h1 class="app title">Matheus Gouvea</h1>
-      <p id="description" class="app description">Um desenvolvedor em constante evolução</p>
+    <header class="profile">
+      <img id="avatar" alt="Foto de Perfil">
+      <h1 id="name"></h1>
+      <p id="description"></p>
     </header>
-
-    <main class="app main">
-      <section class="app section">
-        <ul class="app list" id="links">
-          <!-- Links serão adicionados aqui pelo JavaScript -->
-        </ul>
-      </section>
+    <main>
+      <section id="links" class="links"></section>
+      <section id="social-links" class="social-links"></section>
     </main>
-
-    
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

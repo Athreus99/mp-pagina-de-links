@@ -1,0 +1,37 @@
+{
+    "name": "Matheus Gouvea",
+    "avatar": "./images/avatar.jpg",
+    "description": "Desenvolvedor em crescimento e apaixonado por tecnologia.",
+    "links": [
+      {
+        "text": "Meu portfólio",
+        "href": "https://meuportfolio.com"
+      },
+      {
+        "text": "Conheça o Codante",
+        "href": "https://codante.io"
+      },
+      {
+        "text": "Meu último vídeo",
+        "href": "https://www.youtube.com/watch?v=UhyJO3UP2bw&t=1s"
+      }
+    ],
+    "socialLinks": [
+      {
+        "name": "LinkedIn",
+        "icon": "./images/whatsapp.png",
+        "href": "https://linkedin.com/in/matheusgouvea"
+      },
+      {
+        "name": "Facebook",
+        "icon": "./images/facebook.png",
+        "href": "https://facebook.com/matheusgouvea"
+      },
+      {
+        "name": "Instagram",
+        "icon": "./images/instagram.png",
+        "href": "https://instagram.com/matheusgouvea"
+      }
+    ]
+  }
+  

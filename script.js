@@ -1,37 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const links = [
-    {
-      title: 'Meu Portfólio',
-      url: 'https://github.com/Athreus99?tab=projects'
-    },
-    {
-      title: 'Instagram',
-      url: 'https://www.instagram.com/matheusgouvea99/'
-    },
-    {
-      title: 'WhatsApp',
-      url: 'whatsapp.com/send/?phone=5553984567670&text&type=phone_number&app_absent=0'
-    },
-    {
-      title: 'Facebook',
-      url: 'https://www.facebook.com/matheus.gouvea.351/'
-    }
-  ];
-
-  const list = document.getElementById('links');
-  if (list) {
-    list.innerHTML = '';
-  }
-
-  links.forEach(link => {
-    const li = document.createElement('li');
-    li.classList.add('app', 'item');
-    const a = document.createElement('a');
-    a.href = link.url;
-    a.textContent = link.title;
-    a.classList.add('app', 'link');
-    li.appendChild(a);
-    list.appendChild(li);
+    fetch('profileData.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('avatar').src = data.avatar;
+        document.getElementById('name').innerHTML = `${data.name.split(' ')[0]} <span>${data.name.split(' ').slice(-1)}</span>`;
+        document.getElementById('description').textContent = data.description;
+  
+        const linksContainer = document.getElementById('links');
+        data.links.forEach(link => {
+          const a = document.createElement('a');
+          a.href = link.href;
+          a.textContent = link.text;
+          a.target = "_blank";
+          linksContainer.appendChild(a);
+        });
+  
+        const socialLinksContainer = document.getElementById('social-links');
+        data.socialLinks.forEach(socialLink => {
+          const a = document.createElement('a');
+          a.href = socialLink.href;
+          a.target = "_blank";
+          
+          const img = document.createElement('img');
+          img.src = socialLink.icon;
+          img.alt = socialLink.name;
+  
+          a.appendChild(img);
+          socialLinksContainer.appendChild(a);
+        });
+      })
+      .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
   });
   
-});

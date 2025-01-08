@@ -1,87 +1,83 @@
+/* Mobile-first styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  color: #333;
-}
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .profile {
+    margin-bottom: 20px;
+  }
+  
+  .profile img {
+    width: 120px;
+    height: 140px;
+    border-radius: 50%;
+  }
+  
+  .profile h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .profile h1 span {
+    font-weight: bold;
+  }
+  
+  .profile p {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .links, .social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links a {
+    display: block;
+    padding: 15px;
+    margin: 25px 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 15px;
+  }
+  
+  .links a:hover {
+    background-color: #0056b3;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-links img {
+    width: 40px;
+    height: 40px;
+  }
 
-.background {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.container {
-  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
-  border-radius: 10px;
-  padding: 20px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid #002fff; /* Borda verde fina */
-  text-align: center;
-}
-
-.app.header,
-.app.footer {
-  margin-bottom: 20px;
-}
-
-.app.photo {
-  background-image: url('avatar.jpg');
-  width: 120px;
-  height: 130px;
-  border-radius:80%;
-  margin-bottom: 0px;
-}
-
-.app.main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.app.section {
-  width: 100%;
-}
-
-.app.title,
-.app.link {
-  margin: 10px 0;
-}
-
-.app.list {
-  list-style: none;
-  padding: 0;
-}
-
-.app.item {
-  margin: 10px 0;
-}
-
-.app.link {
-  display: block;
-  padding: 10px;
-  width: 100%;
-  max-width: 250px;
-  margin: auto;
-  text-decoration: none;
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.app.link:hover {
-  background-color: #0056b3;
-}
-
-.app.text {
-  margin: 0;
-}
+  /* Adicionando o fundo com imagem e transparência */
+  body.background {
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com 50% de opacidade */
+  }
+  
